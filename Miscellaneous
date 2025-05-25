@@ -1,0 +1,22 @@
+import os
+import numpy as np
+
+# 1) Print the current working directory
+print("Current working directory:", os.getcwd())
+
+# 2) Provide the full path to data.txt in your Documents folder
+file_path = r"C:\Users\sapta\OneDrive\Documents\data.txt"
+
+# 3) Load data
+filedata = np.genfromtxt(file_path, delimiter=',')
+filedata = filedata.astype('int32')  # ensure they're integers
+print("File data array:\n", filedata)
+
+# 4) Boolean Masking: values > 50
+print("Values in filedata that are > 50:")
+print(filedata[filedata > 50])
+
+# 5) Advanced indexing example
+a = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9])
+indices = [0, 2, 4, 6]
+print(f"Elements at indices {indices} in 'a': {a[indices]}")

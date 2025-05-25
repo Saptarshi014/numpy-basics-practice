@@ -1,0 +1,51 @@
+import numpy as np
+
+# All 0s matrix
+zeros = np.zeros((2, 3))
+print(zeros)
+
+# All 1s matrix
+ones = np.ones((4, 2, 2))
+print(ones)
+
+# Any other number
+filled = np.full((2, 2), 99)
+print(filled) 
+
+# Any other number (full_like)
+filled_like = np.full_like(zeros, 4)
+print(filled_like)
+
+# Random decimal numbers
+random = np.random.rand(4, 2)
+print(random)
+
+# Random Integer values
+random_int = np.random.randint(4, 7, size=(3, 3))
+print(random_int)
+
+# Identity matrix
+identity = np.identity(5)
+print(identity)
+
+# Repeat an array
+arr = np.array([1, 2, 3])
+r1 = np.repeat(arr, 3)
+print(r1)
+
+# Create an array
+output = np.ones((5, 5))
+print(output)
+
+z = np.zeros((3, 3))
+print(z)
+
+output[1:-1, 1:-1] = z
+print(output)
+
+# Copying an array
+a = np.array([1, 2, 3])
+b = a.copy()
+b[0] = 100
+
+print(a)

@@ -1,0 +1,48 @@
+import numpy as np
+
+#Task 1: Create a 6x6 Matrix with Borders = 1 and Inside = 0
+
+output = np.ones((6, 6))
+print(output)
+
+z = np.zeros((4, 4))
+print(z)
+
+output[1:-1, 1:-1] = z
+print(output)
+
+#Task 2: Generate an Array of 50 Random Numbers between 10 and 100
+         #Find mean, median, std deviation
+        #Extract values greater than the mean#
+random_numbers_np = np.random.randint(10, 101, 50)
+print(random_numbers_np)
+
+mean = np.mean(random_numbers_np)
+print(mean)
+
+median = np.median(random_numbers_np)
+print(median)
+
+std = np.std(random_numbers_np)
+print(std)
+
+greater_than_mean = random_numbers_np[random_numbers_np > mean]
+print(greater_than_mean)
+
+#Task 3: Replace Max Value in Each Row of a 10x10 Matrix with -1
+
+matrix = np.random.randint(1, 101, size=(10, 10))
+print("Original Matrix:")
+print(matrix)
+
+# Iterate over each row to replace its maximum value with -1
+for i in range(matrix.shape[0]):
+    # Find the index of the maximum element in the current row
+    max_index = np.argmax(matrix[i])
+    # Replace the maximum element with -1
+    matrix[i, max_index] = -1
+
+print("\nModified Matrix (max values replaced with -1):")
+print(matrix)
+
+
